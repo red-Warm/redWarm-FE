@@ -14,12 +14,12 @@ export function Header() {
         />
       </svg>
 
-      <div className="flex gap-10">
-        <button className="text-white font-16 ">채용공고</button>
-        <button className="text-white font-16 ">GSM취업 현황</button>
-        <button className="text-white font-16 ">커뮤니티</button>
-        <button className="text-white font-16 ">공지사항</button>
-        <button className="p-1 font-semibold text-white rounded-full px-7 font-16 bg-pointRed">
+      <div className="flex gap-10 text-white font-16">
+        <button className="">채용공고</button>
+        <button>GSM취업 현황</button>
+        <button>커뮤니티</button>
+        <button>공지사항</button>
+        <button className="p-1 font-semibold rounded-full px-7 bg-pointRed">
           로그인
         </button>
       </div>
