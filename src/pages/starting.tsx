@@ -10,8 +10,8 @@ export function Starting() {
       className="flex flex-col"
       onClick={() =>
         setTimeout(() => {
-          navigator("/");
-        }, 5000)
+          navigator("/options");
+        }, 2000)
       }
     >
       <Header />
