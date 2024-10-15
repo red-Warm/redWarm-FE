@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="fixed w-[100%] bottom-0 text-white h-30 bg-pointRed flex h-[200px] mb-0 items-center justify-between px-14">
+    <footer className="fixed w-[100%] bottom-0 text-white h-30 bg-pointRed flex h-[180px] mb-0 items-center justify-between px-14">
       <div>
         <h1 className="my-3 text-2xl font-bold">GSM. Job</h1>
         <span>
