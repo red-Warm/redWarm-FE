@@ -73,7 +73,7 @@ export function DevelopGraph() {
     <div>
       <Header />
       <div>
-        <canvas className="font-bold h-[650px]" ref={chartRef}></canvas>
+        <canvas className=" h-[650px]" ref={chartRef}></canvas>
       </div>
     </div>
   );
