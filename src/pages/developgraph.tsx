@@ -8,16 +8,17 @@ import {
   BarController,
   Title,
 } from "chart.js";
-import { graph } from "../type/type";
 import axios from "axios";
+import { developergraph } from "../type/type";
 
 Chart.register(CategoryScale, LinearScale, BarElement, BarController, Title);
 
 export function DevelopGraph() {
-  const [data, setData] = useState<graph>({
-    develop: 0,
-    design: 0,
-    enterprise: 0,
+  const [data, setData] = useState<developergraph>({
+    frontEnd: 30,
+    backEnd: 60,
+    Android: 10,
+    IOS: 20,
   });
   useEffect(() => {
     function getDevelopData() {
@@ -28,6 +29,7 @@ export function DevelopGraph() {
         })
         .catch((err) => {
           console.error("API 요청 오류:", err);
+          alert("그래프르 불러오는데 실패했습니다.");
         });
     }
 
@@ -45,9 +47,9 @@ export function DevelopGraph() {
           datasets: [
             {
               label: "개발자",
-              data: [data.develop, data.design, data.enterprise],
+              data: [data.frontEnd, data.backEnd, data.Android, data.IOS],
               borderWidth: 1,
-              backgroundColor: ["blue", "red", "green"],
+              backgroundColor: ["blue", "red", "green", "yellow"],
             },
           ],
         },
@@ -55,8 +57,11 @@ export function DevelopGraph() {
           scales: {
             y: {
               beginAtZero: true,
+              min: 0,
+              max: 100,
             },
           },
+          maintainAspectRatio: false,
         },
       });
       return () => {
@@ -69,7 +74,7 @@ export function DevelopGraph() {
     <div>
       <Header />
       <div>
-        <canvas ref={chartRef}></canvas>
+        <canvas className="h-[650px]" ref={chartRef}></canvas>
       </div>
     </div>
   );
