@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Header } from "../components/header";
 import design from "../imgs/design.png";
 import develop from "../imgs/develop.png";
@@ -14,19 +15,19 @@ export function Options() {
         <div className="flex justify-between gap-20">
           <div className="relative">
             <img src={enterprise} className="w-[315px]" alt="공기업" />
-            <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
+            <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white cursor-pointer">
               공기업
             </h3>
           </div>
           <div className="relative">
             <img src={develop} className="w-[315px]" alt="개발자" />
-            <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
+            <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white cursor-pointer">
               개발자
             </h3>
           </div>
           <div className="relative">
             <img src={design} className="w-[315px]" alt="디자이너" />
-            <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
+            <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white cursor-pointer">
               디자이너
             </h3>
           </div>
